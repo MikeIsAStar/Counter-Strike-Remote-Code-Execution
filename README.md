@@ -2,7 +2,7 @@
 
 Injects arbitrary code into a client's game.
 
-## Compiling
+## Building
 ```
 amxxpc.exe counter_strike_remote_code_execution.sma
 ```
