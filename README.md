@@ -2,6 +2,9 @@
 
 Injects arbitrary code into a client's game.
 
+## Prerequisites
+- AMX Mod X
+
 ## Building
 ```
 mkdir out
