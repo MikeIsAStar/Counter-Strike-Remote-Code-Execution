@@ -1,0 +1,28 @@
+name: Continuous Integration
+
+on: [pull_request, push, workflow_dispatch]
+
+jobs:
+  build:
+    name: ubuntu-latest
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Set-up AMXXPawn
+      uses: wopox1337/setup-amxxpawn@v1
+      with:
+        version: '1.10.5428'
+
+    - name: Build
+      run: |
+        mkdir out
+        amxxpc -d0 ./source/counter_strike_remote_code_execution.sma -o./out/counter_strike_remote_code_execution.amxx
+
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: Releases
+        path: ./out/counter_strike_remote_code_execution.amxx

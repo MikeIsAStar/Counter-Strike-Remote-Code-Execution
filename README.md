@@ -4,7 +4,8 @@ Injects arbitrary code into a client's game.
 
 ## Building
 ```
-amxxpc.exe counter_strike_remote_code_execution.sma
+mkdir out
+amxxpc -d0 ./source/counter_strike_remote_code_execution.sma -o./out/counter_strike_remote_code_execution.amxx
 ```
 
 ## Usage
